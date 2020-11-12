@@ -1,0 +1,16 @@
+import imdb
+
+
+class MovieSearch:
+
+    def __init__(self, search_word):
+        self.ia = imdb.IMDb()
+        self.search_word = search_word
+        self.search()
+
+    def search(self):
+        print(self.ia.search_movie(self.search_word))
+
+
+movie = MovieSearch('flaming')
+print(movie)
